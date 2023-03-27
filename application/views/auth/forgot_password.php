@@ -1,15 +1,45 @@
-<h1><?php echo lang('forgot_password_heading');?></h1>
-<p><?php echo sprintf(lang('forgot_password_subheading'), $identity_label);?></p>
+<?php $this->load->view('auth/templates/header') ?>
 
-<div id="infoMessage"><?php echo $message;?></div>
+<main class="container">
+   <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+         <div class="card card-signin my-5">
+            <div class="card-body">
+               <h5 class="card-title text-center">Forgot Password</h5>
 
-<?php echo form_open("auth/forgot_password");?>
+               <!-- Alert -->
+               <div class="row">
+                  <div class="col">
+                     <?php if($this->session->flashdata('message')) : ?>
+                        <div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
+                        <?= $this->session->flashdata('message') ?>
+                           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                 <span aria-hidden="true">&times;</span>
+                           </button>   
+                        </div>
+                     <?php endif ?>
+                  </div>
+               </div>
 
-      <p>
-      	<label for="identity"><?php echo (($type=='email') ? sprintf(lang('forgot_password_email_label'), $identity_label) : sprintf(lang('forgot_password_identity_label'), $identity_label));?></label> <br />
-      	<?php echo form_input($identity);?>
-      </p>
+               <?= form_open("auth/forgot_password", ["class" => "form-signin"]) ?>
+                  <div class="form-label-group">
+                  <input type="text" name="identity" value="" class="form-control" id="inputEmail" placeholder="Email" required autofocus>  
+                  <label for="inputEmail">Email</label>
+                  </div>
 
-      <p><?php echo form_submit('submit', lang('forgot_password_submit_btn'));?></p>
+                  <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Submit</button>
 
-<?php echo form_close();?>
+                  <hr class="my-4">
+
+                  <div class="text-center mt-3">
+                  Have an account ? <a href="<?= base_url('auth/login') ?>">Sign In</a> 
+                  </div>
+               <?= form_open() ?>
+            </div>
+         </div>
+      </div>
+   </div>
+</main>
+
+<?php $this->load->view('auth/templates/footer') ?>
+
