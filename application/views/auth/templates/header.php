@@ -18,5 +18,5 @@
     <!-- Custom styles for this template-->
     <link href="<?= base_url('assets/'); ?>css/sb-admin-2.min.css" rel="stylesheet">
     <!--Custom Css -->
-    <link href="<?= base_url('assets'); ?>css/auth.css" rel="stylesheet">
+    <link href="<?= base_url('assets/'); ?>css/auth.css" rel="stylesheet">
 </head>

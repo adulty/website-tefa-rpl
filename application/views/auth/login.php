@@ -28,7 +28,7 @@
                     <a href="index.html" class="btn btn-primary btn-user btn-block">
                       Login
                     </a>
-                    <hr>
+
                   </form>
                   <hr class="my-4">
                   <div class="text-center mt-1">
