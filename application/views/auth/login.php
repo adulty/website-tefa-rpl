@@ -18,18 +18,20 @@
                   <div class="text-center">
                     <h1 class="h4 text-gray-900 mb-4">Admin TEFA</h1>
                   </div>
-                  <form class="user">
+                  <!-- Form LOGIN -->
+                 <?= form_open("auth/login", ["class" => "form-signin "]) ?>
                     <div class="form-group">
                       <input type="text" name="identity" class="form-control form-control-user" id="email" placeholder="Enter Email Address...">
                     </div>
                     <div class="form-group">
                       <input type="password" class="form-control form-control-user" name="password" id="exampleInputPassword" placeholder="Password">
                     </div>
-                    <a href="index.html" class="btn btn-primary btn-user btn-block">
-                      Login
-                    </a>
+                    <button href="index.html" class="btn btn-primary btn-user btn-block" type="submit">
+                      Sign In
+                    </button>
 
-                  </form>
+                  <?= form_close() ?>
+                  <!-- End Form LOGIN -->
                   <hr class="my-4">
                   <div class="text-center mt-1">
                     <a href="<?= base_url('auth/forgot_password') ?>">Forgot Your Password ? </a>
