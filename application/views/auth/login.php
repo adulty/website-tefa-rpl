@@ -26,7 +26,7 @@
                     <div class="form-group">
                       <input type="password" class="form-control form-control-user" name="password" id="exampleInputPassword" placeholder="Password">
                     </div>
-                    <button href="index.html" class="btn btn-primary btn-user btn-block" type="submit">
+                    <button class="btn btn-primary btn-user btn-block" type="submit">
                       Sign In
                     </button>
 
