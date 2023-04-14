@@ -19,7 +19,7 @@
                     <h1 class="h4 text-gray-900 mb-4">Admin TEFA</h1>
                   </div>
                   <!-- Form LOGIN -->
-                 <?= form_open("auth/login", ["class" => "form-signin "]) ?>
+                 <?= form_open("index.php/auth/login", ["class" => "form-signin "]) ?>
                     <div class="form-group">
                       <input type="text" name="identity" class="form-control form-control-user" id="email" placeholder="Enter Email Address...">
                     </div>
